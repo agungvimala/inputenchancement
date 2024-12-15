@@ -59,11 +59,11 @@ int main()
 
     printf("Masukkan teks: ");
     fgets(text, sizeof(text), stdin);
-    text[strcspn(text, "\n")] = 0; // Hilangkan newline dari input
+    text[strcspn(text, "\n")] = 0;
 
     printf("Masukkan pola: ");
     fgets(pattern, sizeof(pattern), stdin);
-    pattern[strcspn(pattern, "\n")] = 0; // Hilangkan newline dari input
+    pattern[strcspn(pattern, "\n")] = 0; 
 
     // Cari pola dalam teks menggunakan Horspool's Algorithm
     int result = HorspoolMatching(text, pattern);
