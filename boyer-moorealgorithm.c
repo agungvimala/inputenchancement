@@ -4,7 +4,6 @@
 
 #define MAX 256 // Jumlah maksimum karakter dalam set karakter
 
-// Fungsi untuk menghasilkan Tabel Karakter Buruk
 void generateBadCharacterTable(char *pattern, int m, int badChar[MAX]) {
     for (int i = 0; i < MAX; i++) {
         badChar[i] = m; // Inisialisasi semua pergeseran dengan panjang pola
@@ -14,7 +13,6 @@ void generateBadCharacterTable(char *pattern, int m, int badChar[MAX]) {
     }
 }
 
-// Fungsi untuk menghasilkan Tabel Sufiks Baik
 void generateGoodSuffixTable(char *pattern, int m, int goodSuffix[m]) {
     int suffix[m]; // Array untuk menyimpan panjang sufiks
 
@@ -89,11 +87,11 @@ int main() {
 
     printf("Masukkan teks: ");
     fgets(text, 1000, stdin);
-    text[strcspn(text, "\n")] = '\0'; // Hapus karakter newline
+    text[strcspn(text, "\n")] = '\0'; 
 
     printf("Masukkan pola: ");
     fgets(pattern, 100, stdin);
-    pattern[strcspn(pattern, "\n")] = '\0'; // Hapus karakter newline
+    pattern[strcspn(pattern, "\n")] = '\0'; 
 
     int result = boyerMoore(text, pattern);
 
